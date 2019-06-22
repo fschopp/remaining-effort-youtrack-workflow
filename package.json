@@ -1,8 +1,8 @@
 {
   "name": "remaining-effort-youtrack-workflow",
   "title": "Remaining effort from subissues",
-  "version": "1.0.0-SNAPSHOT",
-  "description": "YouTrack workflow to automatically compute the remaining effort from all subissues.",
+  "version": "1.0.0",
+  "description": "YouTrack workflow for automatically calculating the remaining effort as the sum of the corresponding values for each subissue.",
   "keywords": [
     "remaining effort",
     "YouTrack",

@@ -1,10 +1,15 @@
 YouTrack workflow for automatically calculating the remaining effort as the sum of the corresponding values for each subissue.
 
+## Status
+
+[![Build Status](https://travis-ci.org/fschopp/remaining-effort-youtrack-workflow.svg?branch=master)](https://travis-ci.org/fschopp/remaining-effort-youtrack-workflow)
+[![Coverage Status](https://coveralls.io/repos/github/fschopp/remaining-effort-youtrack-workflow/badge.svg?branch=master)](https://coveralls.io/github/fschopp/remaining-effort-youtrack-workflow?branch=master)
+
 ## Overview
 
 - Simple YouTrack workflow for automatically calculating [custom field](https://www.jetbrains.com/help/youtrack/standalone/Custom-Fields.html) “Remaining effort” (having [type `period`](https://www.jetbrains.com/help/youtrack/standalone/Supported-Custom-Field-Types.html#simple-field-types)) as the sum of the corresponding values for each subtask.
 - Written in TypeScript. None of the YouTrack workflow examples that I am aware of are, so the project might serve as template for other YouTrack workflows.
-- Full code coverage. Some might find the test infrastructure overkill for a YouTrack workflow as simple as this, but the simplicity only helps for serving as example.
+- [Full code coverage](https://coveralls.io/github/fschopp/remaining-effort-youtrack-workflow?branch=master). Some might find the test infrastructure overkill for just a simple YouTrack workflow, but the simplicity helps for serving as example.
 - [Just like YouTrack does for the Estimation field](https://www.jetbrains.com/help/youtrack/standalone/Time-Management-Tutorial.html#track-estimations-spent-time) (if time tracking is enabled), the synchronization between an issue and its subissues is turned off if you manually override the remaining effort for the parent. To restore the synchronization, simply delete the remaining effort for the parent – it will then be recalculated immediately.
 
 ## License
