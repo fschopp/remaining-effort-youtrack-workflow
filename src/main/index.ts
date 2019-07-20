@@ -1,5 +1,6 @@
 // tslint:disable-next-line:no-reference
 /// <reference path="youtrack-scripting-api.d.ts"/>
+
 import { Period, toPeriod } from '@jetbrains/youtrack-scripting-api/date-time';
 import { Field, Issue, PeriodFieldName, Project, Set } from '@jetbrains/youtrack-scripting-api/entities';
 
@@ -94,9 +95,6 @@ function sumTime(parentIssue: Issue, periodFieldName: PeriodFieldName, project: 
  * Sets the remaining effort for the given issue.
  */
 function setRemainingEffort(issue: Issue, minutes: number | null) {
-  // Very annoying that we cannot rely on RemainingDuration being updated
-  // automatically. We need to call setRemainingDuration() due to:
-  // https://youtrack.jetbrains.com/issue/JT-52086
   if (minutes === null) {
     issue.fields[REMAINING_EFFORT_NAME] = null;
   } else {
